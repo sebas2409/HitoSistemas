@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.rvAlumnList.layoutManager = LinearLayoutManager(this)
-        binding.rvAlumnList.adapter = AlumnoAdapter(viewModel.lista)
+        binding.rvAlumnList.adapter = AlumnoAdapter(viewModel.lista2)
 
         binding.btnAddAlumn.setOnClickListener{addAlumn()}
         binding.btnCreateGroup.setOnClickListener { createGroup() }
@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                 val numero = numberPicker.value
                 val intent= Intent(this,Grupos::class.java)
                 intent.putExtra("numero", numero)
+                Log.i("grupos", viewModel.grouping(4).toString())
                 startActivity(intent)
             }
             .create().show()
@@ -55,7 +56,6 @@ class MainActivity : AppCompatActivity() {
             .setPositiveButton("Añadir"){dialog,_ ->
                 val nombre = view.text.toString()
                 viewModel.add(nombre)
-                Log.i("grupos", viewModel.grouping(4).toString())
                 dialog.dismiss()
             }
             .create().show()

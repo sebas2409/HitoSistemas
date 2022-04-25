@@ -17,9 +17,12 @@ class Grupos : AppCompatActivity() {
         binding= ActivityGruposBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val numeroIntegrantes= intent.getIntExtra("numero",4)
+        val lista = viewModel.grouping(numeroIntegrantes).toString()
 
-        binding.rvGrupos.layoutManager=LinearLayoutManager(this)
-        binding.rvGrupos.adapter= GruposAdapter(viewModel.grouping(numeroIntegrantes))
+        binding.tvGruposCreados.append(lista)
+
+//        binding.rvGrupos.layoutManager=LinearLayoutManager(this)
+//        binding.rvGrupos.adapter= GruposAdapter(viewModel.grouping(numeroIntegrantes),viewModel.lista,numeroIntegrantes)
 
 
     }
