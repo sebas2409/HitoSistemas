@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.watermelon.hito_sistemas.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
+
     private val viewModel: AlumnoViewModel by lazy {
         ViewModelProvider(this)[AlumnoViewModel::class.java]
     }

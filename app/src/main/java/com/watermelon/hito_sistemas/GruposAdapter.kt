@@ -5,9 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.watermelon.hito_sistemas.databinding.GruposHolderBinding
 
-class GruposAdapter(private val grupos: List<List<String>>,
-                    private val lista: ArrayList<String>,
-                    private val numero: Int): RecyclerView.Adapter<GruposAdapter.GruposHolder>() {
+class GruposAdapter(private val lista: Array<List<String>>): RecyclerView.Adapter<GruposAdapter.GruposHolder>() {
 
     class GruposHolder(val binding: GruposHolderBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -17,12 +15,14 @@ class GruposAdapter(private val grupos: List<List<String>>,
     }
 
     override fun onBindViewHolder(holder: GruposHolder, position: Int) {
-           grupos.forEach {
-               holder.binding.tvGrupos.append(it.toString())
-           }
+        val listaGrupos = arrayListOf<String>()
+        for (element in lista){
+            listaGrupos.add(element.toString())
+        }
+        holder.binding.tvGrupos.append(listaGrupos[position])
     }
 
     override fun getItemCount(): Int {
-        return lista.size/numero
+        return lista.size
     }
 }
