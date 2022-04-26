@@ -6,7 +6,7 @@ class AlumnoViewModel: ViewModel() {
 
     val lista: ArrayList<String> = ArrayList()
     val lista2: ArrayList<String> = arrayListOf("Adrian","Portilla","Alamo","Johan","Sanchez","Ivan","Cervecitas","Iker",
-    "Sergio","Isla","Astrid","Juan del campo","Angel","Victor","Bryan","Dani","Guti","Villalobos","Sebas","Diego","Mario","Rafa","Otro Valverde")
+    "Sergio","Isla","Astrid","Juan del campo","Angel","Victor","Bryan","Dani","Guti","Villalobos","Sebas","Diego","Mario","Rafa","Otro Valverde","luquero")
 
 
 
