@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="85dp">
+    android:layout_height="105dp">
 
     <TextView
         android:id="@+id/tvGrupos"
@@ -13,5 +13,5 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:layout_height="wrap_content"
-        tools:text="Mario - Sebastian - Daniel - Javie Snchez" />
+        tools:text="[Otro valverde, Guti, Snachez, Rafa, Mario,villalobos]" />
 </LinearLayout>
